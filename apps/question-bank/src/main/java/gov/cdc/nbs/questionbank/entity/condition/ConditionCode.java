@@ -171,9 +171,9 @@ public class ConditionCode implements Serializable {
         this.portReqIndCd = 'F';
 
         //code system
-        if (codeSystemDescTxt.equalsIgnoreCase("Local")) {
+        if ("Local".equalsIgnoreCase(codeSystemDescTxt)) {
             this.codeSystemCd = "L";
-        } else if (codeSystemDescTxt.equalsIgnoreCase("SNOMED-CT")) {
+        } else if ("SNOMED-CT".equalsIgnoreCase(codeSystemDescTxt)) {
             this.codeSystemCd = "2.16.840.1.113883.6.96";
         } else {
             this.codeSystemCd = "2.16.840.1.114222.4.5.277";

@@ -46,9 +46,9 @@ public class PatientFilterFromRequestParamResolver {
             }
             if (StringUtils.hasText(map.get(NBS_EVENT_TYPE)) && StringUtils.hasText(map.get(NBS_EVENT_ID))) {
                 var type = map.get(NBS_EVENT_TYPE);
-                if (type.equals(VACCINE_TYPE)) {
+                if (VACCINE_TYPE.equals(type)) {
                     filter.setVaccinationId(map.get(NBS_EVENT_ID));
-                } else if (type.equals(TREATMENT_TYPE)) {
+                } else if (TREATMENT_TYPE.equals(type)) {
                     filter.setTreatmentId(map.get(NBS_EVENT_ID));
                 }
             }
